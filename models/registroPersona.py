@@ -26,7 +26,9 @@ class RegistroPersonas:
         return registros_formateados
 
 
-    def obtener_extremos_de_edad(self):
+    def obtener_extremos_de_edad(self) -> tuple[Persona, Persona] | None :
+        if not self.personas:
+            raise ValueError("No hay personas registradas.")
         mayor_edad = max(self.personas.values(), key=lambda x:x.edad)
         menor_edad = min(self.personas.values(), key=lambda x:x.edad)
         return mayor_edad, menor_edad
