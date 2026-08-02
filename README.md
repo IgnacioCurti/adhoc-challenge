@@ -1,4 +1,4 @@
-# adhoc-challenge
+# AdHoc Challenge
 
 ## Cómo ejecutar el script
 
